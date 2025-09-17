@@ -1,6 +1,9 @@
 {
   "name": "pdf.js",
   "type": "module",
+  "dependencies": {
+    "konva": "^9.2.2"
+  },
   "devDependencies": {
     "@babel/core": "^7.28.4",
     "@babel/preset-env": "^7.28.3",

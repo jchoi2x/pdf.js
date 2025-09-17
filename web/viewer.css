@@ -104,6 +104,7 @@
   --toolbarButton-editorHighlight-icon: url(images/toolbarButton-editorHighlight.svg);
   --toolbarButton-editorInk-icon: url(images/toolbarButton-editorInk.svg);
   --toolbarButton-editorStamp-icon: url(images/toolbarButton-editorStamp.svg);
+  --toolbarButton-editorKonvaShape-icon: url(images/toolbarButton-editorKonvaShape.svg);
   --toolbarButton-editorSignature-icon: url(images/toolbarButton-editorSignature.svg);
   --toolbarButton-menuArrow-icon: url(images/toolbarButton-menuArrow.svg);
   --toolbarButton-sidebarToggle-icon: url(images/toolbarButton-sidebarToggle.svg);
@@ -561,6 +562,10 @@ body {
 
 #editorStampButton::before {
   mask-image: var(--toolbarButton-editorStamp-icon);
+}
+
+#editorKonvaShapeButton::before {
+  mask-image: var(--toolbarButton-editorKonvaShape-icon);
 }
 
 #editorSignatureButton::before {
@@ -1173,8 +1178,50 @@ dialog :link {
           background-color: white;
         }
       }
+
+      .editorParamsSelect {
+        background-color: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 2px;
+        font: message-box;
+        height: 26px;
+        padding: 0 4px;
+        width: 90px;
+        flex: 0 1 0;
+        
+        &:focus {
+          border-color: rgba(0, 0, 0, 0.6);
+          outline: none;
+        }
+      }
+
+      .editorParamsCheckbox {
+        margin-inline-end: 8px;
+        width: auto;
+        height: auto;
+        flex: none;
+      }
     }
   }
+}
+
+/* Konva Draw Layer Styles */
+.konva-draw-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.konvaShapeEditor {
+  cursor: crosshair;
+}
+
+.konvaShapeEditor.drawing {
+  cursor: cell;
 }
 
 #secondaryToolbar {

@@ -66,6 +66,10 @@ function getViewerConfiguration() {
       editorStampParamsToolbar: document.getElementById(
         "editorStampParamsToolbar"
       ),
+      editorKonvaShapeButton: document.getElementById("editorKonvaShapeButton"),
+      editorKonvaShapeParamsToolbar: document.getElementById(
+        "editorKonvaShapeParamsToolbar"
+      ),
       editorSignatureButton: document.getElementById("editorSignatureButton"),
       editorSignatureParamsToolbar: document.getElementById(
         "editorSignatureParamsToolbar"

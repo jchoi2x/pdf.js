@@ -61,6 +61,7 @@ See https://github.com/adobe-type-tools/cmap-resources
           "fluent-bundle": "../node_modules/@fluent/bundle/esm/index.js",
           "fluent-dom": "../node_modules/@fluent/dom/esm/index.js",
           "cached-iterable": "../node_modules/cached-iterable/src/index.mjs",
+          "konva": "../node_modules/konva/lib/konva.esm.js",
 
           "display-cmap_reader_factory": "../src/display/cmap_reader_factory.js",
           "display-standard_fontdata_factory": "../src/display/standard_fontdata_factory.js",
@@ -350,6 +351,41 @@ See https://github.com/adobe-type-tools/cmap-resources
                         <button id="editorStampAddImage" class="toolbarButton labeled" type="button" tabindex="0" data-l10n-id="pdfjs-editor-stamp-add-image-button">
                           <span class="editorParamsLabel" data-l10n-id="pdfjs-editor-stamp-add-image-button-label"></span>
                         </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="editorKonvaShape" class="toolbarButtonWithContainer">
+                    <button id="editorKonvaShapeButton" class="toolbarButton" type="button" disabled="disabled" role="radio" aria-expanded="false" aria-haspopup="true" aria-controls="editorKonvaShapeParamsToolbar" tabindex="0" data-l10n-id="pdfjs-editor-konva-shape-button">
+                      <span data-l10n-id="pdfjs-editor-konva-shape-button-label"></span>
+                    </button>
+                    <div class="editorParamsToolbar hidden doorHangerRight" id="editorKonvaShapeParamsToolbar">
+                      <div class="editorParamsToolbarContainer">
+                        <div class="editorParamsSetter">
+                          <label for="editorKonvaShapeType" class="editorParamsLabel" data-l10n-id="pdfjs-editor-konva-shape-type-input">Shape Type:</label>
+                          <select id="editorKonvaShapeType" class="editorParamsSelect" tabindex="0">
+                            <option value="rect" selected>Rectangle</option>
+                            <option value="circle">Circle</option>
+                            <option value="ellipse">Ellipse</option>
+                            <option value="line">Line</option>
+                            <option value="arrow">Arrow</option>
+                          </select>
+                        </div>
+                        <div class="editorParamsSetter">
+                          <label for="editorKonvaShapeColor" class="editorParamsLabel" data-l10n-id="pdfjs-editor-konva-shape-color-input">Color:</label>
+                          <input type="color" id="editorKonvaShapeColor" class="editorParamsColor" value="#000000" tabindex="0">
+                        </div>
+                        <div class="editorParamsSetter">
+                          <label for="editorKonvaShapeThickness" class="editorParamsLabel" data-l10n-id="pdfjs-editor-konva-shape-thickness-input">Thickness:</label>
+                          <input type="range" id="editorKonvaShapeThickness" class="editorParamsSlider" value="2" min="1" max="10" step="1" tabindex="0">
+                        </div>
+                        <div class="editorParamsSetter">
+                          <label for="editorKonvaShapeFill" class="editorParamsLabel" data-l10n-id="pdfjs-editor-konva-shape-fill-input">Fill:</label>
+                          <input type="color" id="editorKonvaShapeFill" class="editorParamsColor" value="#transparent" tabindex="0">
+                        </div>
+                        <div class="editorParamsSetter">
+                          <input type="checkbox" id="editorKonvaShapeFillEnabled" class="editorParamsCheckbox" tabindex="0">
+                          <label for="editorKonvaShapeFillEnabled" class="editorParamsLabel" data-l10n-id="pdfjs-editor-konva-shape-fill-enabled">Enable Fill</label>
+                        </div>
                       </div>
                     </div>
                   </div>

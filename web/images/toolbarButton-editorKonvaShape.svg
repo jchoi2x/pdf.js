@@ -1,0 +1,13 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="black">
+  <!-- Rectangle -->
+  <rect x="2" y="2" width="6" height="4" fill="none" stroke="black" stroke-width="1"/>
+  <!-- Circle -->
+  <circle cx="11" cy="4" r="2.5" fill="none" stroke="black" stroke-width="1"/>
+  <!-- Line -->
+  <line x1="2" y1="10" x2="8" y2="13" stroke="black" stroke-width="1"/>
+  <!-- Triangle/Arrow -->
+  <path d="M10 10 L14 10 L12 13 Z" fill="none" stroke="black" stroke-width="1"/>
+</svg>

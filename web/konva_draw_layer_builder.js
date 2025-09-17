@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import { KonvaDrawLayer } from "../src/display/konva_draw_layer.js";
+import { KonvaDrawLayer } from "pdfjs/display/konva_draw_layer.js";
 
 /**
  * @typedef {Object} KonvaDrawLayerBuilderOptions

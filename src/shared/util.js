@@ -78,6 +78,7 @@ const AnnotationEditorType = {
   POPUP: 16,
   SIGNATURE: 101,
   COMMENT: 102,
+  KONVA_SHAPE: 103,
 };
 
 const AnnotationEditorParamsType = {
@@ -94,6 +95,11 @@ const AnnotationEditorParamsType = {
   HIGHLIGHT_FREE: 33,
   HIGHLIGHT_SHOW_ALL: 34,
   DRAW_STEP: 41,
+  KONVA_SHAPE_TYPE: 51,
+  KONVA_SHAPE_COLOR: 52,
+  KONVA_SHAPE_THICKNESS: 53,
+  KONVA_SHAPE_FILL: 54,
+  KONVA_SHAPE_FILL_ENABLED: 55,
 };
 
 // Permission flags from Table 22, Section 7.6.3.2 of the PDF specification.

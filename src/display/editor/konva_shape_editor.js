@@ -34,13 +34,15 @@ class KonvaShapeEditor extends DrawingEditor {
 
   static _type = "konvaShape";
 
-  static _editorType = AnnotationEditorType.DRAW;
+  static _editorType = AnnotationEditorType.KONVA_SHAPE;
 
   constructor(params) {
     super({ ...params, mustBeCommitted: false });
     
     this.#shapeDrawer = new KonvaShapeDrawer(this.#currentShapeType);
     this.#konvaDrawLayer = params.konvaDrawLayer;
+    this.fillColor = 'transparent';
+    this.fillEnabled = false;
     
     this._setupShapeEditor();
   }
@@ -174,16 +176,26 @@ class KonvaShapeEditor extends DrawingEditor {
    */
   updateProperty(name, value) {
     switch (name) {
-      case AnnotationEditorParamsType.DRAW_COLOR:
+      case AnnotationEditorParamsType.KONVA_SHAPE_COLOR:
         this.color = value;
         this.#shapeDrawer.setProperties({ stroke: value });
         break;
-      case AnnotationEditorParamsType.DRAW_THICKNESS:
+      case AnnotationEditorParamsType.KONVA_SHAPE_THICKNESS:
         this.thickness = value;
         this.#shapeDrawer.setProperties({ strokeWidth: value });
         break;
-      case "shapeType":
+      case AnnotationEditorParamsType.KONVA_SHAPE_TYPE:
         this.setShapeType(value);
+        break;
+      case AnnotationEditorParamsType.KONVA_SHAPE_FILL:
+        this.fillColor = value;
+        this.#shapeDrawer.setProperties({ fill: this.fillEnabled ? value : 'transparent' });
+        break;
+      case AnnotationEditorParamsType.KONVA_SHAPE_FILL_ENABLED:
+        this.fillEnabled = value;
+        this.#shapeDrawer.setProperties({ 
+          fill: value ? (this.fillColor || 'transparent') : 'transparent' 
+        });
         break;
     }
   }
